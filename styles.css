@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+html {
+    font-family: 'Noto Sans JP', sans-serif;
+}
+.container{
+    padding: 0 20%;
+}
+
+.card {
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 50px;
+}
+.card > .checkbox {
+display: block;
+}
+
+
+ul > li {
+display: inline-block;
+padding: 0 10px;
+}
+ul {
+    display:flex;
+    justify-content: center;
+}
+
+li > a {
+    text-decoration: none;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+li > a:hover {
+    color:lightgray;
+    text-decoration: underline;
+}
+.delete:hover {
+    opacity: 0.6;
+}
