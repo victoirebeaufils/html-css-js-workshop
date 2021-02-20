@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link href="styles.css" rel="stylesheet">
+    <script src="script.js" async></script>
 </head>
 
 <body>
     <div class="container">
-    <nav>
-        <ul>
-            <li><a href="index.html">To-do</a></li>
-            <li><a href="completed.html">Completed</a></li>
-        </ul>
-    </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">To-do</a></li>
+                <li><a href="completed.html">Completed</a></li>
+            </ul>
+        </nav>
     </div>
     <div class="container">
-    <div class="card">
-    <div class="form">    <input type="text" placeholder="Add task..." > </input> <button>Submit</button></div>
-<div class="checkbox">    <input type="checkbox" > Task 1 </input> <a class="delete">🗑️</a></div>
-<div class="checkbox">   <input type="checkbox" > Task 2 </input><a class="delete">🗑️</a></div>
+        <div class="card">
+            <form onsubmit="addTask(event)" name="addNewTask" class="form">
+                <input type="text" placeholder="Add task..." name="task"> </input>
+                <button>Submit</button>
+            </form>
+        </div>
     </div>
     </div>
 </body>
