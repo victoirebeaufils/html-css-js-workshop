@@ -20,7 +20,8 @@ function createTaskNode(task) {
     input.type = "checkbox";
     let deleteButton = document.createElement("a");
     deleteButton.className = "delete";
-    deleteButton.append("🗑️");
+    deleteButton.append(" delete");
+    deleteButton.style.color = "CornflowerBlue";
     deleteButton.addEventListener("click", function () {
         deleteTask(task, taskNode);
     });
