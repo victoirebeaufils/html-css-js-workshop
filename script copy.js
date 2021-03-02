@@ -18,6 +18,8 @@ function createTaskNode(task) {
     let label = document.createElement("label");
     let input = document.createElement("input"); // cant do this <input>{content}</input>
     input.type = "checkbox";
+
+
     let deleteButton = document.createElement("a");
     deleteButton.className = "delete";
     deleteButton.append("delete");
@@ -25,18 +27,19 @@ function createTaskNode(task) {
     deleteButton.addEventListener("click", function () {
         deleteTask(task, taskNode); 
     });
+
     label.appendChild(input);
     label.append(task);
     label.appendChild(deleteButton);
-    taskNode.appendChild(label); 
+    taskNode.appendChild(label); // use label and add everything to it, convention
     return taskNode;
 }
 
 function addTask(e) {
-    e.preventDefault(); // because of onSubmit reload
+    e.preventDefault(); 
     let form = document.forms["addNewTask"];
     tasks.push(form["task"].value);
-    tasksDiv.appendChild(createTaskNode(form["task"].value)); //js only runs when page loaded, so need to append child a second time to make it visible
+    tasksDiv.appendChild(createTaskNode(form["task"].value)); 
     window.localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
@@ -50,3 +53,4 @@ function deleteTask(task, taskNode) {
 tasksHtml.forEach((task) => {
     tasksDiv.appendChild(task); // add tasks to screen
 });
+
