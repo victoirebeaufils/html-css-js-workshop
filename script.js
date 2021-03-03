@@ -42,7 +42,7 @@ function addTask(e) {
 
 function deleteTask(task, taskNode) {
     let index = tasks.indexOf(task);
-    tasksDiv.removeChild(taskNode); //same thing as line 39
+    tasksDiv.removeChild(taskNode); //same thing as line 39 but delete instead
     tasks.splice(index, 1); // just removes 1 element at that index
     window.localStorage.setItem("tasks", JSON.stringify(tasks));
 }

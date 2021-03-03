@@ -4,6 +4,10 @@ html {
 }
 .container {
     padding: 0 20%;
+    /*
+    padding-left: 20%
+    padding-right:20%
+    */
 }
 
 .card {
@@ -27,7 +31,7 @@ ul {
 li > a {
     text-decoration: none;
     color: darkolivegreen;
-    text-align: center;
+  /*  text-align: center;*/
 }
 
 li > a:hover {
@@ -36,4 +40,8 @@ li > a:hover {
 }
 .delete:hover {
     opacity: 0.6;
+}
+.margin {
+    background-color:darkolivegreen;
+    padding: 200px;
 }
